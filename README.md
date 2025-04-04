@@ -2,7 +2,7 @@
 
 <div align="center">
   <img src="./docs/static/img/logo.png" alt="Logo" width="200">
-  <h1 align="center">OpenHands: Code Less, Make More</h1>
+  <h1 align="center">OpenHands: コード少なく、創造多く</h1>
 </div>
 
 
@@ -22,25 +22,25 @@
   <hr>
 </div>
 
-Welcome to OpenHands (formerly OpenDevin), a platform for software development agents powered by AI.
+OpenHands（旧OpenDevin）へようこそ。AIを活用したソフトウェア開発エージェントのプラットフォームです。
 
-OpenHands agents can do anything a human developer can: modify code, run commands, browse the web,
-call APIs, and yes—even copy code snippets from StackOverflow.
+OpenHandsエージェントは人間の開発者と同じことができます：コードの修正、コマンドの実行、ウェブの閲覧、
+APIの呼び出し、そしてもちろん—StackOverflowからコードスニペットをコピーすることも。
 
-Learn more at [docs.all-hands.dev](https://docs.all-hands.dev), or jump to the [Quick Start](#-quick-start).
+詳細は[docs.all-hands.dev](https://docs.all-hands.dev)をご覧いただくか、[クイックスタート](#-quick-start)にジャンプしてください。
 
 > [!IMPORTANT]
-> Using OpenHands for work? We'd love to chat! Fill out
-> [this short form](https://docs.google.com/forms/d/e/1FAIpQLSet3VbGaz8z32gW9Wm-Grl4jpt5WgMXPgJ4EDPVmCETCBpJtQ/viewform)
-> to join our Design Partner program, where you'll get early access to commercial features and the opportunity to provide input on our product roadmap.
+> 仕事でOpenHandsを使用していますか？ぜひお話を聞かせてください！
+> [この短いフォーム](https://docs.google.com/forms/d/e/1FAIpQLSet3VbGaz8z32gW9Wm-Grl4jpt5WgMXPgJ4EDPVmCETCBpJtQ/viewform)
+> に記入して、デザインパートナープログラムにご参加ください。商用機能への早期アクセスや製品ロードマップへの意見提供の機会が得られます。
 
 ![App screenshot](./docs/static/img/screenshot.png)
 
-## ⚡ Quick Start
+## ⚡ クイックスタート
 
-The easiest way to run OpenHands is in Docker.
-See the [Running OpenHands](https://docs.all-hands.dev/modules/usage/installation) guide for
-system requirements and more information.
+OpenHandsを実行する最も簡単な方法はDockerを使用することです。
+システム要件や詳細情報については[OpenHandsの実行](https://docs.all-hands.dev/modules/usage/installation)ガイドを
+ご覧ください。
 
 ```bash
 docker pull docker.all-hands.dev/all-hands-ai/runtime:0.31-nikolaik
@@ -57,58 +57,57 @@ docker run -it --rm --pull=always \
 ```
 
 > [!WARNING]
-> On a public network? See our [Hardened Docker Installation](https://docs.all-hands.dev/modules/usage/runtimes/docker#hardened-docker-installation) guide
-> to secure your deployment by restricting network binding and implementing additional security measures.
+> パブリックネットワーク上で使用する場合は、[強化されたDockerインストール](https://docs.all-hands.dev/modules/usage/runtimes/docker#hardened-docker-installation)ガイドを参照して、
+> ネットワークバインディングを制限し、追加のセキュリティ対策を実装することでデプロイメントを保護してください。
 
-You'll find OpenHands running at [http://localhost:3000](http://localhost:3000)!
+OpenHandsは[http://localhost:3000](http://localhost:3000)で実行されています！
 
-Finally, you'll need a model provider and API key.
-[Anthropic's Claude 3.5 Sonnet](https://www.anthropic.com/api) (`anthropic/claude-3-5-sonnet-20241022`)
-works best, but you have [many options](https://docs.all-hands.dev/modules/usage/llms).
+最後に、モデルプロバイダーとAPIキーが必要です。
+[AnthropicのClaude 3.5 Sonnet](https://www.anthropic.com/api) (`anthropic/claude-3-5-sonnet-20241022`)
+が最も効果的ですが、[他にも多くの選択肢](https://docs.all-hands.dev/modules/usage/llms)があります。
 
 ---
 
-You can also [connect OpenHands to your local filesystem](https://docs.all-hands.dev/modules/usage/runtimes/docker#connecting-to-your-filesystem),
-run OpenHands in a scriptable [headless mode](https://docs.all-hands.dev/modules/usage/how-to/headless-mode),
-interact with it via a [friendly CLI](https://docs.all-hands.dev/modules/usage/how-to/cli-mode),
-or run it on tagged issues with [a github action](https://docs.all-hands.dev/modules/usage/how-to/github-action).
+また、[OpenHandsをローカルファイルシステムに接続](https://docs.all-hands.dev/modules/usage/runtimes/docker#connecting-to-your-filesystem)したり、
+[ヘッドレスモード](https://docs.all-hands.dev/modules/usage/how-to/headless-mode)でスクリプト化して実行したり、
+[使いやすいCLI](https://docs.all-hands.dev/modules/usage/how-to/cli-mode)で操作したり、
+[GitHubアクション](https://docs.all-hands.dev/modules/usage/how-to/github-action)でタグ付けされた課題に対して実行することもできます。
 
-Visit [Running OpenHands](https://docs.all-hands.dev/modules/usage/installation) for more information and setup instructions.
+詳細なセットアップ手順については[OpenHandsの実行](https://docs.all-hands.dev/modules/usage/installation)をご覧ください。
 
 > [!CAUTION]
-> OpenHands is meant to be run by a single user on their local workstation.
-> It is not appropriate for multi-tenant deployments where multiple users share the same instance. There is no built-in isolation or scalability.
+> OpenHandsはローカルワークステーションで単一ユーザーによって実行されることを想定しています。
+> 複数のユーザーが同じインスタンスを共有するマルチテナント環境には適していません。組み込みの分離機能やスケーラビリティはありません。
 >
-> If you're interested in running OpenHands in a multi-tenant environment, please
-> [get in touch with us](https://docs.google.com/forms/d/e/1FAIpQLSet3VbGaz8z32gW9Wm-Grl4jpt5WgMXPgJ4EDPVmCETCBpJtQ/viewform)
-> for advanced deployment options.
+> マルチテナント環境でOpenHandsを実行することに興味がある場合は、
+> 高度なデプロイメントオプションについて[お問い合わせください](https://docs.google.com/forms/d/e/1FAIpQLSet3VbGaz8z32gW9Wm-Grl4jpt5WgMXPgJ4EDPVmCETCBpJtQ/viewform)。
 
-If you want to modify the OpenHands source code, check out [Development.md](https://github.com/All-Hands-AI/OpenHands/blob/main/Development.md).
+OpenHandsのソースコードを変更したい場合は、[Development.md](https://github.com/All-Hands-AI/OpenHands/blob/main/Development.md)をご覧ください。
 
-Having issues? The [Troubleshooting Guide](https://docs.all-hands.dev/modules/usage/troubleshooting) can help.
+問題がありますか？[トラブルシューティングガイド](https://docs.all-hands.dev/modules/usage/troubleshooting)が役立ちます。
 
-## 📖 Documentation
+## 📖 ドキュメント
 
-To learn more about the project, and for tips on using OpenHands,
-check out our [documentation](https://docs.all-hands.dev/modules/usage/getting-started).
+プロジェクトについてさらに学び、OpenHandsの使用に関するヒントを得るには、
+[ドキュメント](https://docs.all-hands.dev/modules/usage/getting-started)をご覧ください。
 
-There you'll find resources on how to use different LLM providers,
-troubleshooting resources, and advanced configuration options.
+そこでは、異なるLLMプロバイダーの使用方法、
+トラブルシューティングリソース、高度な設定オプションに関するリソースが見つかります。
 
-## 🤝 How to Join the Community
+## 🤝 コミュニティへの参加方法
 
-OpenHands is a community-driven project, and we welcome contributions from everyone. We do most of our communication
-through Slack, so this is the best place to start, but we also are happy to have you contact us on Discord or Github:
+OpenHandsはコミュニティ主導のプロジェクトであり、誰からの貢献も歓迎します。私たちはほとんどのコミュニケーションを
+Slackを通じて行っているため、ここから始めるのが最適ですが、DiscordやGithubでのご連絡も歓迎します：
 
-- [Join our Slack workspace](https://join.slack.com/t/openhands-ai/shared_invite/zt-2ngejmfw6-9gW4APWOC9XUp1n~SiQ6iw) - Here we talk about research, architecture, and future development.
-- [Join our Discord server](https://discord.gg/ESHStjSjD4) - This is a community-run server for general discussion, questions, and feedback.
-- [Read or post Github Issues](https://github.com/All-Hands-AI/OpenHands/issues) - Check out the issues we're working on, or add your own ideas.
+- [Slackワークスペースに参加する](https://join.slack.com/t/openhands-ai/shared_invite/zt-2ngejmfw6-9gW4APWOC9XUp1n~SiQ6iw) - ここでは研究、アーキテクチャ、将来の開発について話し合います。
+- [Discordサーバーに参加する](https://discord.gg/ESHStjSjD4) - これは一般的な議論、質問、フィードバックのためのコミュニティ運営サーバーです。
+- [Github Issuesを読んだり投稿したりする](https://github.com/All-Hands-AI/OpenHands/issues) - 取り組んでいる課題を確認したり、自分のアイデアを追加したりできます。
 
-See more about the community in [COMMUNITY.md](./COMMUNITY.md) or find details on contributing in [CONTRIBUTING.md](./CONTRIBUTING.md).
+コミュニティについての詳細は[COMMUNITY.md](./COMMUNITY.md)を、貢献に関する詳細は[CONTRIBUTING.md](./CONTRIBUTING.md)をご覧ください。
 
-## 📈 Progress
+## 📈 進捗状況
 
-See the monthly OpenHands roadmap [here](https://github.com/orgs/All-Hands-AI/projects/1) (updated at the maintainer's meeting at the end of each month).
+月次のOpenHandsロードマップは[こちら](https://github.com/orgs/All-Hands-AI/projects/1)でご覧いただけます（毎月末のメンテナー会議で更新されます）。
 
 <p align="center">
   <a href="https://star-history.com/#All-Hands-AI/OpenHands&Date">
@@ -116,17 +115,17 @@ See the monthly OpenHands roadmap [here](https://github.com/orgs/All-Hands-AI/pr
   </a>
 </p>
 
-## 📜 License
+## 📜 ライセンス
 
-Distributed under the MIT License. See [`LICENSE`](./LICENSE) for more information.
+MITライセンスの下で配布されています。詳細は[`LICENSE`](./LICENSE)をご覧ください。
 
-## 🙏 Acknowledgements
+## 🙏 謝辞
 
-OpenHands is built by a large number of contributors, and every contribution is greatly appreciated! We also build upon other open source projects, and we are deeply thankful for their work.
+OpenHandsは多くの貢献者によって構築されており、すべての貢献に深く感謝しています！また、他のオープンソースプロジェクトの上に構築されており、それらの作業に深く感謝しています。
 
-For a list of open source projects and licenses used in OpenHands, please see our [CREDITS.md](./CREDITS.md) file.
+OpenHandsで使用されているオープンソースプロジェクトとライセンスのリストについては、[CREDITS.md](./CREDITS.md)ファイルをご覧ください。
 
-## 📚 Cite
+## 📚 引用
 
 ```
 @misc{openhands,
