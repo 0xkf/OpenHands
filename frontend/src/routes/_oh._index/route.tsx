@@ -28,10 +28,10 @@ function Home() {
   return (
     <div
       data-testid="home-screen"
-      className="bg-base-secondary h-full rounded-xl flex flex-col items-center justify-center relative overflow-y-auto px-2"
+      className="bg-base-secondary h-full rounded-xl flex flex-col items-center justify-center relative overflow-y-auto px-2 sm:px-4"
     >
       <HeroHeading />
-      <div className="flex flex-col gap-1 w-full mt-8 md:w-[600px] items-center">
+      <div className="flex flex-col gap-1 w-full mt-4 sm:mt-6 md:mt-8 md:w-[600px] items-center">
         <div className="flex flex-col gap-2 w-full">
           <TaskForm ref={formRef} />
         </div>
